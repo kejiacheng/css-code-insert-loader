@@ -1,0 +1,23 @@
+{
+  "name": "css-code-insert-loader",
+  "version": "1.0.0",
+  "description": "主要用于在指定的css预处理器（sass,less等）上在头部或特定地方注入通用代码",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kejiacheng/css-code-insert-loader.git"
+  },
+  "keywords": [
+    "css",
+    "头部注入代码"
+  ],
+  "author": "柯嘉诚",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kejiacheng/css-code-insert-loader/issues"
+  },
+  "homepage": "https://github.com/kejiacheng/css-code-insert-loader#readme"
+}
