@@ -1,6 +1,12 @@
 # css-code-insert-loader
 主要功能：在指定的css预处理器（sass,less等）上的头部或特定地方注入通用代码
 
+## 安装
+
+```js
+npm i -D css-code-insert-loader
+```
+
 ## 用法
 将该loader放于各css预处理器loader之后，下面以sass为例
 
