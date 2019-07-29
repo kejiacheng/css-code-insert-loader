@@ -13,20 +13,20 @@ module.exports = function (content) {
     let isInclude = true
 
     isInclude = judgeIsInclude(resourcePath, options.include)
-  
+
     if (isInclude) {
       if (typeof options.data === 'function') {
         const replaceCode = '/* warning css-code-insert */'
         let data = options.data(resourcePath)
-
+    
         // 判断是否存在替换标识
-        if (content.indexOf(replaceCode)) {
+        if (content.indexOf(replaceCode) > -1) {
           content = content.replace(replaceCode, data)
         } else {
           content = data + '\n' + content
         }
       }
-
+      
       this.callback(null, content)
     }
   }
@@ -64,4 +64,3 @@ function judgeIsInclude (resourcePath, include) {
     return true
   }
 }
-
