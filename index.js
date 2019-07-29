@@ -17,7 +17,9 @@ module.exports = function (content) {
     if (isInclude) {
       if (typeof options.data === 'function') {
         const replaceCode = '/* warning css-code-insert */'
-        let data = options.data(resourcePath)
+        let data = options.data({
+          filePath: resourcePath
+        })
     
         // 判断是否存在替换标识
         if (content.indexOf(replaceCode) > -1) {
@@ -25,6 +27,8 @@ module.exports = function (content) {
         } else {
           content = data + '\n' + content
         }
+      } else if (typeof options.data === 'string') {
+        content = options.data + '\n' + content
       }
       
       this.callback(null, content)
