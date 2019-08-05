@@ -30,11 +30,9 @@ module.exports = function (content) {
       } else if (typeof options.data === 'string') {
         content = options.data + '\n' + content
       }
-      
-      this.callback(null, content)
     }
   }
-  return content
+  this.callback(null, content)
 }
 
 function judgeIsExclude (resourcePath, exclude) {
